@@ -1,1 +1,7 @@
-This is a sample text file
+Following are the shell script for jenkins job
+
+sudo docker rm -f $(docker ps -a -q)
+sudo docker build /home/ubuntu/jenkins/workspace/git-job/ -t devopsweb
+sudo docker run -it -p 80:80 -d devopsweb
+sudo cp ./intellpat_tutorial.jar /home/ubuntu
+sudo su -c "java -jar /home/ubuntu/intellpat_tutorial.jar" -s /bin/sh ubuntu
